@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" ng-app="motoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/js/script.js"></script>
+   <!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="app.animations.css" />
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="app.animations.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/checkmark/checkmark.filter.js"></script>
+    <script src="core/phone/phone.module.js"></script>
+    <script src="core/phone/phone.service.js"></script>
+    <script src="phone-list/phone-list.module.js"></script>
+    <script src="phone-list/phone-list.component.js"></script>
+    <script src="phone-detail/phone-detail.module.js"></script>
+    <script src="phone-detail/phone-detail.component.js"></script> -->
+
+  </head>
+  <body>
+        <div class="container body" ng-controller="DsMoto">
+            <div class="row">
+                <h1 class="h1">DANH SÁCH MOTO BÁN CHẠY NHẤT NĂM 2017</h1>
+            </div>
+            <div class="col-md-3">
+                <p>Tìm Kiếm :<br>
+                    <input type="" name="" ng-model="DsMoto.name" style="color: blue; margin-top: 10px;">
+                </p>
+            </div>
+            <div class="col-md-9">
+                <ul class="col-md-12">
+                    <li class="row" ng-repeat="moto in motos | filter:DsMoto">
+                        <div class="col-sm-4 img-thumb">
+                            <img src="{{moto.img}}">
+                        </div>
+                        <div class="col-sm-8">
+                            <p>Ten: <span style="color: red; font-weight: bold;">{{moto.name}}</span></p>
+                            <p>Mô Tả: {{moto.snippet}}</p>
+                        </div>
+                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+  </body>
+  <style type="text/css">
+      .body{
+        background:black;
+        color: yellow;
+        padding: 30px;
+      }
+      .h1{
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        color: blue;
+      }
+      .img-thumb img{
+        width: 100%;
+      }
+      ul>li{
+        list-style: none;
+        margin-bottom: 10px;
+        border: blue solid 1px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+      }
+  </style>
+</html>
