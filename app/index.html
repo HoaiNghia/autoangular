@@ -28,9 +28,12 @@
     <script src="phone-detail/phone-detail.module.js"></script>
     <script src="phone-detail/phone-detail.component.js"></script> -->
 
-  </head>
-  <body>
-        <div class="container body" ng-controller="DsMoto">
+  	</head>
+  	<body class="container">
+  		<div class="row header">
+  			
+  		</div>
+        <div class="row body" ng-controller="DsMoto">
             <div class="row">
                 <h1 class="h1">DANH SÁCH MOTO BÁN CHẠY NHẤT NĂM 2017</h1>
             </div>
@@ -54,19 +57,21 @@
                         <div class="col-sm-9">
                             <p>Ten: <span style="color: red; font-weight: bold;">{{moto.name}}</span></p>
                             <p>Mô Tả: {{moto.snippet}}</p>
-                            <p style="color:red;">Giá : {{moto.Price}}</p>
+                            <p>Giá : <span  style="color:red;">{{moto.Price}}</span> $USD</p>
                         </div>
                        
                     </li>
                 </ul>
             </div>
         </div>
+        <div class="row footer">
+        	<p>Coppy right</p>
+        </div>
         
-  </body>
-  <style type="text/css">
+ 	</body>
+  	<style type="text/css">
       .body{
-        background:black;
-        color: yellow;
+        background:#f4f7f9;
         padding: 30px;
       }
       .h1{
@@ -81,10 +86,15 @@
       ul>li{
         list-style: none;
         margin-bottom: 10px;
-        border: blue solid 1px;
+        border:#cbcbda solid 1px;
         padding-top: 15px;
         padding-bottom: 15px;
 
+      }
+      .footer p{
+      		line-height: 50px;
+      		text-align: center;
+      		background: #c1cbd2;
       }
   </style>
 </html>
