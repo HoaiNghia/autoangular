@@ -5,7 +5,7 @@
     <title>Google Phone Gallery</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <script src="bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="bower_components/js/script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
    <!--  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script> -->
 
     <!-- <link rel="stylesheet" href="app.css" />
@@ -33,16 +33,16 @@
   		<div class="row header">
   			
   		</div>
-        <div class="row body" ng-controller="DsMoto">
+        <div class="row body" ng-controller="ctrl_listmoto">
             <div class="row">
                 <h1 class="h1">DANH SÁCH MOTO BÁN CHẠY NHẤT NĂM 2017</h1>
             </div>
             <div class="col-md-3">
                 <p>Tìm Kiếm :<br>
-                    <input type="" name="" ng-model="DsMoto.name" style="color: blue; margin-top: 10px;">
+                    <input type="" name="" ng-model="ctrl_listmoto.name" style="color: blue; margin-top: 10px;">
                 </p>
                 <p>Sắp xếp:
-                    <select ng-model="ctrl.DsMoto.oderKey" style="color: red;">
+                    <select ng-model="ctrl.ctrl_listmoto.oderKey" style="color: red;">
                         <option value="name">Tên</option>
                         <option value="Price">Giá</option>
                     </select>
@@ -50,14 +50,14 @@
             </div>
             <div class="col-md-9">
                 <ul class="col-md-12">
-                    <li class="row" ng-repeat="moto in motos | filter:DsMoto | orderBy:ctrl.DsMoto.oderKey">
+                    <li class="row" ng-repeat="moto in motos | filter:ctrl_listmoto | orderBy:ctrl.ctrl_listmoto.oderKey">
                         <div class="col-sm-3 img-thumb">
                             <img src="{{moto.img}}">
                         </div>
                         <div class="col-sm-9">
                             <p>Ten: <span style="color: red; font-weight: bold;">{{moto.name}}</span></p>
                             <p>Mô Tả: {{moto.snippet}}</p>
-                            <p>Giá : <span  style="color:red;">{{moto.Price}}</span> $USD</p>
+                            <p>Giá : <span  style="color:red;">{{moto.price}}</span> $USD</p>
                         </div>
                        
                     </li>
